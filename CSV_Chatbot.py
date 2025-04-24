@@ -14,7 +14,7 @@ decr_api = fernet.decrypt(encrypted_key).decode()
 
 st.title('CSV Chatbot📊')
 
-uploaded_file = st.file_uploader("Upload a data file")
+uploaded_file = st.file_uploader("Upload a CSV file")
 if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.dataframe(dataframe)
